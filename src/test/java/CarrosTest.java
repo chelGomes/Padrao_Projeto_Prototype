@@ -12,10 +12,27 @@ public class CarrosTest {
         Carros carrosClone = carros.clone();
         carrosClone.setMarca("Ford");
         carrosClone.setAnoFabricacao(2010);
-        carrosClone.getModelo().setNumeroPortas(2);
+        carrosClone.getModelo().setNumeroPortas(4);
 
-        assertEquals("Carros{marca=Hyundai,modelo=hb20, modelo=Modelo{combustivel=gasolina,proprietario=Joao,numeroPortas=2},anoFabricacao=2023,cor=branco,preco=25000}", carros.toString());
-        assertEquals("Carros{marca=Jeep,modelo=Modelo{combustivel='gasolina',proprietario='Jose', numeroPortas=2}, anoFabricacao=2021, cor='cinza', preco=230000}", carrosClone.toString());
+        assertEquals("Carros{" +
+                "marca=" + "Hyundai" +
+                ", combustivel ='" + "gasolina" + '\'' +
+                ", proprietario ='" + "Joao" + '\'' +
+                ", numeroPortas ='" + 2 + '\'' +
+                ", anoFabricacao=" + 2023 +
+                ", cor=" + "branco" +
+                ", preco='" + 25000.0 + '\'' +
+                '}', carros.toString());
+
+        assertEquals("Carros{" +
+                "marca=" + "Ford" +
+                ", combustivel ='" + "gasolina" + '\'' +
+                ", proprietario ='" + "Joao" + '\'' +
+                ", numeroPortas ='" + 4 + '\'' +
+                ", anoFabricacao=" + 2010 +
+                ", cor=" + "branco" +
+                ", preco='" + 25000.0 + '\'' +
+                '}', carrosClone.toString());
     }
 
 }

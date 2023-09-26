@@ -67,7 +67,9 @@ public class Carros implements Cloneable{
     public String toString() {
         return "Carros{" +
                 "marca=" + marca +
-                ", modelo ='" + modelo + '\'' +
+                ", combustivel ='" + modelo.getCombustivel() + '\'' +
+                ", proprietario ='" + modelo.getProprietario() + '\'' +
+                ", numeroPortas ='" + modelo.getNumeroPortas() + '\'' +
                 ", anoFabricacao=" + anoFabricacao +
                 ", cor=" + cor +
                 ", preco='" + preco + '\'' +
